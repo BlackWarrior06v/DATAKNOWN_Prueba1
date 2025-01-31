@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 def load_csv_data(path, separation, decimal, reversed):
 
@@ -8,3 +9,6 @@ def load_csv_data(path, separation, decimal, reversed):
         X = X.iloc[::-1]
 
     return X
+
+def fit_X(dates,a,b):
+    return a + b*dates
