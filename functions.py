@@ -5,6 +5,7 @@ def load_csv_data(path, separation, decimal, reversed):
 
     X = pd.read_csv(path, parse_dates=["Date"], sep=separation, decimal=decimal)
 
+    # We will need the data ordered in an ascending way
     if reversed:
         X = X.iloc[::-1]
 
